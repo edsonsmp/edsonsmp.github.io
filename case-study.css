@@ -46,7 +46,7 @@ p::selection {
 
 .case-nav-links a {
     font-size: 14px;
-    color: #737373;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -70,8 +70,7 @@ p::selection {
 
 /* Hero Section */
 .case-hero {
-    background-color: #FBFBFC;
-    padding: 140px 0 80px;
+    padding: 180px 0 80px;
 }
 
 .case-meta {
@@ -112,7 +111,6 @@ p::selection {
 /* Sections */
 .case-section {
     padding: 100px 0;
-    background-color: #ffffff;
 }
 
 .case-section-gray {
@@ -197,10 +195,7 @@ p::selection {
 }
 
 /* Results Section with White Background */
-.case-section-white {
-    padding: 100px 0;
-    background-color: #f1f6f9;
-}
+
 
 /* Results Grid - Bento Box Layout */
 .results-grid {
@@ -359,7 +354,6 @@ p::selection {
 
 .case-list li {
     font-size: 15px;
-    color: #737373;
     line-height: 1.8;
     padding-left: 24px;
     position: relative;
@@ -510,7 +504,6 @@ p::selection {
 
 /* Footer */
 .case-footer {
-    background-color: #fafafa;
     padding: 60px 0;
     border-top: 1px solid #e5e5e5;
 }
