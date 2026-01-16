@@ -80,7 +80,7 @@ p::selection {
 
 .case-meta {
     font-size: 13px;
-    color: #a3a3a3;
+    color: #696969;
     letter-spacing: 0.05em;
     margin-bottom: 32px;
 }
@@ -104,7 +104,7 @@ p::selection {
 
 .case-subtitle {
     font-size: 18px;
-    color: #737373;
+    color: #696969;
     margin-bottom: 60px;
 }
 
@@ -268,7 +268,7 @@ p::selection {
 
 .metric-label {
     font-size: 14px;
-    color: #737373;
+    color: #696969;
     line-height: 1.5;
 }
 
@@ -354,7 +354,7 @@ p::selection {
 
 .case-metric-label {
     font-size: 15px;
-    color: #737373;
+    color: #696969;
     line-height: 1.6;
 }
 
@@ -372,7 +372,7 @@ p::selection {
 
 .case-text {
     font-size: 16px;
-    color: #737373;
+    color: #696969;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -491,7 +491,7 @@ p::selection {
 .case-company-name {
     font-size: 16px;
     font-weight: 500;
-    color: #737373;
+    color: #696969;
 }
 
 /* Back Navigation Section */
@@ -503,7 +503,7 @@ p::selection {
 /* CTA Section */
 .case-cta {
     background-color: #131a16;
-    padding: 100px 0;
+    padding: 80px 0 0;
     text-align: center;
 }
 
@@ -637,7 +637,7 @@ p::selection {
     }
 
     .case-cta {
-        padding: 60px 0;
+        padding: 80px 0 0;
     }
 
     .case-footer {

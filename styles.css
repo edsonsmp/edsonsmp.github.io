@@ -202,7 +202,7 @@ body {
 }
 
 .footer-spacer {
-    height: 50vh;
+    height: 40vh;
     background-color: #131a16;
 }
 
@@ -569,7 +569,7 @@ body {
     }
 
     .footer-spacer {
-        height: 80vh;
+        height: 55vh;
     }
 
     .footer-grid {
