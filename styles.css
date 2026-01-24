@@ -683,12 +683,17 @@ body {
         justify-self: start;
     }
 
+    .main-content {
+        border-radius: 0;
+    }
+
     .footer {
-      padding: 80px 24px 24px;
+        position: static;
+        padding: 80px 24px 24px;
     }
 
     .footer-spacer {
-        height: 55vh;
+        display: none;
     }
 
     .footer-grid {
