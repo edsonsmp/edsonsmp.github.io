@@ -204,6 +204,7 @@ body {
     z-index: 10;
     background-color: var(--bg-primary);
     border-radius: 0 0 32px 32px;
+    overflow: hidden;
 }
 
 .footer-spacer {
