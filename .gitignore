@@ -24,5 +24,8 @@ UI-GIF_ACESSIBILIDADE.gif
 *.swp
 *~
 
+# Backup
+backup/
+
 # Planos Claude
 .claude/

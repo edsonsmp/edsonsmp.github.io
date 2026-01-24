@@ -8,6 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <style>
+        .hero-video {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .hero-video svg,
+        .hero-video canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+        }
+
+        @media (max-width: 720px) {
+            .hero-video {
+                height: auto;
+            }
+
+            .hero-video svg,
+            .hero-video canvas {
+                height: auto !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -41,6 +69,8 @@
     </nav>
 
     <main class="main-content">
+
+    <div class="hero-video" id="lottie-container"></div>
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
@@ -50,68 +80,6 @@
             <p class="hero-subtitle">
                 Edson Sampaio, +8 years in product design field, specialized in B2B SaaS, from Goiânia, Brazil. I help companies validate and scale products by balancing delivery speed with user experience.
             </p>
-        </section>
-
-        <!-- Carousel Section -->
-        <section class="carousel-section">
-            <div class="carousel-container">
-                <!-- Carousel description -->
-                <div class="carousel-sidebar">
-                    <div class="carousel-info">
-                        <p class="carousel-description">Intelligent routing system that reduced operational costs by up to 20%</p>
-                    </div>
-                </div>
-
-                <!-- Right side: horizontal scroll slider -->
-                <div class="carousel-slider">
-                    <div class="carousel-track">
-                        <div class="carousel-slide" data-index="0" data-title="Roteirizador Inteligente @ Involves" data-description="Intelligent routing system that reduced operational costs by up to 20%">
-                            <img src="Thumb01.png" alt="Roteirizador Inteligente project">
-                        </div>
-                        <div class="carousel-slide" data-index="1" data-title="Logo Concept for Silver Tooth Post" data-description="3D logo design and visual identity exploration @ Silter Toorh Post">
-                            <img src="Thumb02.png" alt="Silver Tooth Logo project">
-                        </div>
-                        <div class="carousel-slide" data-index="2" data-title="Components Design" data-description="Components design @ Involves">
-                            <img src="Thumb03.png" alt="Components Design project">
-                        </div>
-                        <div class="carousel-slide" data-index="3" data-title="Silver Tooth Post" data-description="Webdesign consulting and visual design for Silver Tooth Post">
-                            <img src="Thumb04.png" alt="Project 4">
-                        </div>
-                        <div class="carousel-slide" data-index="4" data-title="Silver Tooth Post 3D Type" data-description="3D logo design and visual identity exploration @ Silter Toorh Post">
-                            <img src="Thumb05.png" alt="3D Logo project">
-                        </div>
-                        <!-- Disabled for now
-                        <div class="carousel-slide" data-index="5" data-title="Project 6" data-description="Project description coming soon">
-                            <img src="Thumb-6.png" alt="Project 6">
-                        </div>
-                        -->
-                        <div class="carousel-slide" data-index="5" data-title="Silver Tooth Post" data-description="Logo Exploration for Silver Tooth Post">
-                            <img src="Thumb07.png" alt="Silver Tooth Post Project">
-                        </div>
-                        <div class="carousel-slide" data-index="6" data-title="Inari Type" data-description="Website UI design for Inari Type foundry">
-                            <img src="Thumb08.png" alt="Inari Type Website project">
-                        </div>
-                        <div class="carousel-slide" data-index="7" data-title="Silver Tooth Post" data-description="3D logo design and visual identity exploration @ Silter Toorh Post">
-                            <img src="Thumb09.png" alt="Silver Tooth Post Project">
-                        </div>
-                        <div class="carousel-slide" data-index="8" data-title="Talent Acess Portal" data-description="App Design design for Talent AcessPortal">
-                            <img src="Thumb10.png" alt="Talent Access Portal Project">
-                        </div>
-                        <div class="carousel-slide" data-index="9" data-title="HIC ET NUNC NFT Gallery and Marketplace" data-description="UI For Criptoart Marketplace @ HIC ET NUNC">
-                            <img src="Thumb11.png" alt="HIC AT NUNC">
-                        </div>
-                        <div class="carousel-slide" data-index="10" data-title="Tilix App" data-description="Tilix App MVP design exploration">
-                            <img src="Thumb12.png" alt="Tilix App">
-                        </div>
-                        <div class="carousel-slide" data-index="11" data-title="Inari Type Foundry" data-description="Website design for Inari Type foundry">
-                            <img src="Thumb13.png" alt="Project 13">
-                        </div>
-                        <div class="carousel-slide" data-index="12" data-title="TownSQ Business" data-description="TownSQ Business App Redesign project">
-                            <img src="Thumb14.png" alt="TownSQ Business App Redesign project">
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Selected Work Section -->
@@ -252,134 +220,15 @@ Product Designer with 8 years of experience working across the full product life
             });
         });
 
-        // Carousel functionality
-        (function() {
-            const slider = document.querySelector('.carousel-slider');
-            const slides = document.querySelectorAll('.carousel-slide');
-            const descEl = document.querySelector('.carousel-description');
-
-            if (!slider || slides.length === 0) return;
-
-            let currentIndex = 0;
-            let isHovering = false;
-            let autoPlayInterval = null;
-            const autoPlayDelay = 3000; // 3 seconds
-
-            // Auto-play functions
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                scrollToSlide(currentIndex);
-            }
-
-            function startAutoPlay() {
-                stopAutoPlay();
-                autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
-            }
-
-            function stopAutoPlay() {
-                if (autoPlayInterval) {
-                    clearInterval(autoPlayInterval);
-                    autoPlayInterval = null;
-                }
-            }
-
-            // Show description with fade in
-            function showInfo(index) {
-                const slide = slides[index];
-                if (slide && descEl) {
-                    descEl.textContent = slide.dataset.description || '';
-                    descEl.style.opacity = '1';
-                }
-            }
-
-            // Hide description with fade out
-            function hideInfo() {
-                if (descEl) {
-                    descEl.style.opacity = '0';
-                }
-            }
-
-            // Scroll to specific slide (centered)
-            function scrollToSlide(index) {
-                const slide = slides[index];
-                if (slide) {
-                    const sliderWidth = slider.clientWidth;
-                    const slideWidth = slide.offsetWidth;
-                    const slideLeft = slide.offsetLeft;
-                    // Calculate scroll position to center the slide
-                    const scrollPosition = slideLeft - (sliderWidth / 2) + (slideWidth / 2);
-                    slider.scrollTo({
-                        left: scrollPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-
-            // Calculate which slide is most visible
-            function getVisibleSlideIndex() {
-                const sliderRect = slider.getBoundingClientRect();
-                const sliderLeft = sliderRect.left;
-
-                let closestIndex = 0;
-                let closestDistance = Infinity;
-
-                slides.forEach((slide, index) => {
-                    const slideRect = slide.getBoundingClientRect();
-                    const slideCenter = slideRect.left + slideRect.width / 2;
-                    const distance = Math.abs(slideCenter - sliderLeft - 100);
-
-                    if (distance < closestDistance) {
-                        closestDistance = distance;
-                        closestIndex = index;
-                    }
-                });
-
-                return closestIndex;
-            }
-
-            // Throttle function for scroll performance
-            function throttle(func, limit) {
-                let inThrottle;
-                return function() {
-                    if (!inThrottle) {
-                        func.apply(this, arguments);
-                        inThrottle = true;
-                        setTimeout(() => inThrottle = false, limit);
-                    }
-                };
-            }
-
-            // Handle scroll
-            const handleScroll = throttle(function() {
-                const newIndex = getVisibleSlideIndex();
-                if (newIndex !== currentIndex) {
-                    currentIndex = newIndex;
-                }
-            }, 50);
-
-            slider.addEventListener('scroll', handleScroll, { passive: true });
-
-            // Hover description - show only on hover
-            slides.forEach((slide, index) => {
-                slide.addEventListener('mouseenter', () => {
-                    isHovering = true;
-                    showInfo(index);
-                });
-
-                slide.addEventListener('mouseleave', () => {
-                    isHovering = false;
-                    hideInfo();
-                });
-            });
-
-            // Pause auto-play on slider hover
-            slider.addEventListener('mouseenter', stopAutoPlay);
-            slider.addEventListener('mouseleave', startAutoPlay);
-
-            // Initialize - start with description hidden
-            hideInfo();
-            startAutoPlay();
-        })();
+    </script>
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'lottie.json'
+        });
     </script>
 </body>
 </html>
