@@ -240,7 +240,7 @@ body {
     font-size: 16px;
     color: inherit;
     max-width: 600px;
-    line-height: 1.7;
+    line-height: 1.48;
     max-width: 57ch;
 }
 
@@ -645,7 +645,7 @@ body {
     }
 
     .hero {
-        padding: 80px 0 60px;
+        padding: 40px 0 40px;
     }
 
     .hero-title {
